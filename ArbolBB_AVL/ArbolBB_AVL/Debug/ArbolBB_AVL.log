@@ -1,0 +1,6 @@
+﻿  Arbol.cpp
+C:\Users\USER\Documents\GitHub\EDD_Ejemplos\ArbolBB_AVL\ArbolBB_AVL\Arbol.h(13,8): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+  ArbolBB_AVL.cpp
+C:\Users\USER\Documents\GitHub\EDD_Ejemplos\ArbolBB_AVL\ArbolBB_AVL\Arbol.h(13,8): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+  Generando código...
+  ArbolBB_AVL.vcxproj -> C:\Users\USER\Documents\GitHub\EDD_Ejemplos\ArbolBB_AVL\Debug\ArbolBB_AVL.exe
