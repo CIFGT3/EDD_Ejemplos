@@ -16,5 +16,8 @@ public:
 	void insertarEnMedio(std::string dato1, int dato2,std::string buscar);
 	Nodo* buscarNodo(std::string dato1);
 	Nodo* eliminarNodo(std::string dato1);
+
+	void graficar();
+	void getDot(FILE* file, Nodo* cabeza);
 };
 

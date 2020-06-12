@@ -10,7 +10,7 @@ public:
 	Nodo* raiz;
 
 	Arbol() {
-		raiz == nullptr;
+		raiz = nullptr;
 	}
 
 	void insertarNodo(int numero);
@@ -21,6 +21,7 @@ public:
 	bool noHayRaiz(); //verifica si el arbol no tiene raiz (si esta vacio)
 	Nodo* buscar(int numero); //busca un nodo y lo retorna si lo encuentra
 
+	void recorrerParaGraficar(FILE* archivo, Nodo* cabeza, string cadena);
 	void graficarArbol();
 	string generarTexto(string cadena, Nodo* nodo);
 

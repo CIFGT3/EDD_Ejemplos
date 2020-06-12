@@ -3,14 +3,45 @@
 
 #include <iostream>
 #include "Arbol.h"
+#include "ArbolAvl.h"
+#include "NodoAvl.h"
 
 // include stdlib.h
 //para salir exit(1)
 int main()
 {
+    
     cout << "JULIO EMILIANO CIFUENTES ZABALBA / CARNE 201801677 \n \n";
+    ArbolAvl* arbolito = new ArbolAvl();
+    arbolito->insertarNodoAvl(4);
+    arbolito->insertarNodoAvl(100);
+    arbolito->insertarNodoAvl(41);
+    arbolito->insertarNodoAvl(13);
+    arbolito->insertarNodoAvl(15);
+    arbolito->insertarNodoAvl(67);
+    arbolito->insertarNodoAvl(46);
+    arbolito->insertarNodoAvl(11);
+    arbolito->insertarNodoAvl(55);
+    arbolito->insertarNodoAvl(21);
+    arbolito->insertarNodoAvl(29);
+    arbolito->insertarNodoAvl(83);
+    arbolito->insertarNodoAvl(71);
+    arbolito->insertarNodoAvl(22);
+    arbolito->insertarNodoAvl(3);
+
+    arbolito->preOrden(arbolito->raiz);
+
+    arbolito->eliminarNodoAvl(3);
+    arbolito->eliminarNodoAvl(46);
+    arbolito->eliminarNodoAvl(100);
+
+    arbolito->graficarArbol();
+
+
+
+
     // CREANDO ARBOL AVL Y NODOS
-    Arbol *Ab = new Arbol();
+    /*Arbol *Ab = new Arbol();
     Ab->insertarNodo(25);
     Ab->insertarNodo(10);
     Ab->insertarNodo(35);
@@ -20,7 +51,8 @@ int main()
     Ab->insertarNodo(40);
     cout << " Recorrido en orden" << endl;
     Ab->enOrden(Ab->raiz);
-
+    Ab->graficarArbol();*/
+    /*
     // BUSCAR
     Nodo* nuevo;
     cout <<endl<< " \nNodo a buscar: 40 \n";
@@ -44,7 +76,20 @@ int main()
     cout << " Recorrido en orden" << endl;
     Ab->enOrden(Ab->raiz);
 
-    Ab->graficarArbol();
+    string a = "zadfkkfkfk122";
+    string b = "sdffddddasss";
+    if (a<b)
+    {
+        cout << "a es menor";
+    }
+    else {
+        cout << "a es mayor";
+    }
+    */
+    
+
+
+    //Ab->graficarArbol();
 
     //cout << " Recorrido en orden" << endl;
     //Ab->enOrden(Ab->raiz);

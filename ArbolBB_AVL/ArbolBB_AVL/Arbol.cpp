@@ -111,6 +111,8 @@ bool Arbol::eliminarNodo(int numero) {
 	return true;
 }
 
+
+
 // metodo para modificar
 void Arbol::modificarNodo(int valor, int nuevo) {
 	eliminarNodo(valor);
@@ -208,29 +210,61 @@ string Arbol::generarTexto(string cadena, Nodo* nodo) {
 		preOrden(nodo->izquierda);
 		preOrden(nodo->derecha);
 	}
+	return cadena;
+}
+
+
+// Metodo para recorrer el arbol
+void Arbol::recorrerParaGraficar(FILE* file, Nodo* nodo, string cadena) {
+	if (nodo != nullptr)
+	{	
+		if (nodo->izquierda != nullptr) {
+			cout << "entra al nodo izquierda " << nodo->numero;
+			cadena = " " + to_string(nodo->numero) + " -> " + to_string(nodo->izquierda->numero) + " ; \n";
+			fprintf(file,cadena.c_str());
+		}
+		if (nodo->derecha != nullptr) {
+			cout << " entra al nodo derecha " << nodo->numero;
+			cadena = " " + to_string(nodo->numero) + " -> " + to_string(nodo->derecha->numero) + " ; \n";
+			fprintf(file, cadena.c_str());
+		}
+		recorrerParaGraficar(file,nodo->izquierda, cadena);
+		recorrerParaGraficar(file,nodo->derecha, cadena);
+	}
 }
 
 // metodo para crear el archivo a graficar
 void Arbol::graficarArbol() {
-	string nombreArchivo = "arbol.txt";
-	
+	/*string nombreArchivo = "arbol.txt";
+		
 	fstream archivo;
 	archivo.open(nombreArchivo, ios::out);
 
 	if (archivo.fail())
 	{
 		cout << "NO SE PUDO CREAR EL ARCHIVO";
+		return;
 	}
 
-	string titulo = "digraph G{ \n";
-	string cuerpo;
+	string titulo = "digraph G{ \n rankdir=TB; \n";
+	string cuerpo="";
 	string fin = "}";
 	string texto;
-
+	recorrerParaGraficar(this->raiz, cuerpo);
+	*/
+	FILE* file;
+	string cuerpo = "";
+	file = fopen("arboll.txt", "w+");
+	fprintf(file, "digraph G{ \n rankdir=TB; \n");
+	recorrerParaGraficar(file, this->raiz,cuerpo);
+	fprintf(file, "}");
+	fclose(file);
 	
+	//texto = titulo + cuerpo + fin;
 
-	archivo << "Hola perros";
-	archivo.close();
+	//archivo << texto;
+	//archivo.close();
+	system("dot -Tpng arboll.txt -o arbolNuevo.png");
 }
 /*
 digraph G {

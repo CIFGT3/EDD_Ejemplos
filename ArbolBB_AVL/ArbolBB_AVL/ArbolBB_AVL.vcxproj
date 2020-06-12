@@ -88,7 +88,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -148,12 +148,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arbol.cpp" />
+    <ClCompile Include="ArbolAvl.cpp" />
     <ClCompile Include="ArbolBB_AVL.cpp" />
     <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="NodoAvl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbol.h" />
+    <ClInclude Include="ArbolAvl.h" />
     <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoAvl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
