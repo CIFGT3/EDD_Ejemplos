@@ -170,7 +170,7 @@ Nodo* Matriz::buscarEmpresa(string empresa, Nodo* inicio) {
 		if (aux->nombre == empresa) {
 			return aux;
 		}
-		aux = aux->Siguiente;
+		aux = aux->Abajo;
 	}
 	return nullptr;
 }

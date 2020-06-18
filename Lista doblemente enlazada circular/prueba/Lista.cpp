@@ -63,22 +63,6 @@ Nodo* Lista::buscarNodo(string dato1) {
 			//paso1
 			aux = aux->siguiente;
 		} while (aux != Cabeza);
-
-		//paso1
-		/*while (aux != Cola) {
-			if (aux->nombre == dato1) {
-				//paso3
-				return aux;
-			}
-
-			//paso1
-			aux = aux->siguiente;
-		}
-		aux = Cola;
-		if (aux->nombre == dato1) {
-			return aux;
-		} */
-
 		cout << "\n Dato no Encontrado";
 	}
 	cout << "\n Lista Vacía";
